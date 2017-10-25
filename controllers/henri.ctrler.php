@@ -3,7 +3,6 @@
 class HenriCtrler
 {
     public function __construct() {
-        // require_once('views/pages/my-work.php');
     }
 
     public function process($action) {

@@ -1,14 +1,12 @@
 <?php
-include_once 'controllers/mywork.ctrler.php';
+include_once 'controllers/henri.ctrler.php';
 
 class Router{
 	private $request;
-	// private $henriCtrler;
-	private $contrller;
+	private $controller;
 
 	public function __construct($request){
 		$this->request = $request;
-		// $this->henriCtrler = new HenriCtrler();
 	}
 
 	public function get($route, $file){
