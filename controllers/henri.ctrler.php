@@ -14,8 +14,7 @@ class HenriCtrler
     } // end process
 
     private function myWorkAction() {
-    	$data = config::constant('INPUT_DATA');
-    	var_dump($data);
+    	$data = config::input_data();
     	require_once('views/pages/my-work.php');
     }
 
