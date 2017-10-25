@@ -1,6 +1,7 @@
 <?php
-
+include_once('config.php');
 include_once 'routers/router.config.php';
+
 
 $request = $_SERVER['REQUEST_URI'];
 $router = new Router($request);

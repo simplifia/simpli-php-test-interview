@@ -12,7 +12,6 @@ class Router{
 	public function get($route, $file){
 		$uri = trim( $this->request, '/');
 		$uri = explode('/', $uri);
-		var_dump($uri);
 		
 		if($uri[0] == trim($route, '/')){
 			array_shift($uri);
