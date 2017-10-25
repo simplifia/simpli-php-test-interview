@@ -15,12 +15,14 @@ class HenriCtrler
     		case 'my-work':
     			$this->myWorkAction();
     			break;
+            default:
+                $this->errorAction();
     	}
     } // end process
 
     private function indexAction() {
         require_once('views/henri/default.php');
-    }
+    } // end indexAction
 
     private function myWorkAction() {
     	$data = config::input_data(); // get data from constant config file
@@ -31,6 +33,10 @@ class HenriCtrler
     		array_push($items, new NumbersModel($num1, $num2));
     	}
     	require_once('views/henri/my-work.php');
-    }
+    } // end myWorkAction
+
+    private function errorAction() {
+        require_once('views/error/default.php');
+    } // end errorAction
 
 }
