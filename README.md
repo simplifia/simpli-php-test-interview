@@ -30,3 +30,7 @@ Don't forget to add **pertinent test** to your code
 When you start working, please push an initial commit.  
 After that, please push at least one commit every 30 minutes.  
 When you are done, please create a Pull Request (https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
+
+
+### Unit Test ###
+phpunit --bootstrap models/numbers.model.php tests/my-work.test.php
