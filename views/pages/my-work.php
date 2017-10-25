@@ -1,6 +1,10 @@
-<h1>Our super table </h1>
+<style>
+	<?php include 'styles/pages/my-work.css'; ?>
+</style>
 
-<table style="width:100%">
+<h1 class="super-header">Our super table </h1>
+
+<table class="super-table">
   	<tr>
     	<th>Item 1</th>
     	<th>Item 2</th> 
@@ -9,10 +13,10 @@
   	</tr>
   	<?php foreach($items as $item){ ?>
   	<tr>
-    	<th> <?php echo $item->getNum1(); ?> </th>
-    	<th> <?php echo $item->getNum2(); ?></th>
-    	<th> <?php echo $item->getSum(); ?> </th>
-    	<th> <?php echo $item->getPair(); ?> </th>
+    	<td> <?php echo $item->getNum1(); ?> </td>
+    	<td> <?php echo $item->getNum2(); ?></td>
+    	<td> <?php echo $item->getSum(); ?> </td>
+    	<td> <?php echo $item->getPair(); ?> </td>
   	</tr>
   	<?php } ?>
 </table>
