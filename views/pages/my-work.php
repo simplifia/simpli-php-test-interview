@@ -7,11 +7,12 @@
     	<th>Item1 + Item2</th>
     	<th>Paire/impaire</th>
   	</tr>
-  	<?php foreach($data as $num1=>$num2){ ?>
+  	<?php foreach($items as $item){ ?>
   	<tr>
-    	<th> <?php echo $num1; ?> </th>
-    	<th> <?php echo $num2; ?></th> 
-    	<th> rslt </th>
+    	<th> <?php echo $item->getNum1(); ?> </th>
+    	<th> <?php echo $item->getNum2(); ?></th>
+    	<th> <?php echo $item->getSum(); ?> </th>
+    	<th> <?php echo $item->getPair(); ?> </th>
   	</tr>
   	<?php } ?>
 </table>

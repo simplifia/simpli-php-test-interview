@@ -23,9 +23,6 @@ class HenriCtrler
     		// create a NumbersModel from $num1 and $num2, then add to $items
     		array_push($items, new NumbersModel($num1, $num2));
     	}
-
-    	var_dump($items);
-
     	require_once('views/pages/my-work.php');
     }
 
