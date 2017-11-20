@@ -1,0 +1,20 @@
+.super-table {
+    border-collapse: collapse;
+	width : 85%;
+	margin : auto;
+}
+.super-title{
+	padding :5px;
+}
+.super-table, .super-column, .super-header-column{
+    border: 2px solid black;
+	text-align: left;
+	font-weight: normal;
+	font-size : 100%;
+}
+.super-header-column{
+    background-color: #64B5F6;
+}
+.super-header-column,.super-column{
+	padding : 5px;
+}
