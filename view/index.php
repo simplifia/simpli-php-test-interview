@@ -1,7 +1,9 @@
 <?php
-require "config.php";
-$data=constant("INPUT_DATA");
-$tab = unserialize($data);
+require_once "../models/data.php";
+
+$data = new data();
+$data->loadData();
+$tab = $data->getData();
 $cles=array_keys($tab);
 ?>
 <!doctype html>
@@ -12,7 +14,7 @@ $cles=array_keys($tab);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <h1 style="padding-left:20px;font-family: Segoe UI;font-size: 30px;font-weight: 600;">Our super table</h1>
