@@ -1,0 +1,26 @@
+#tb1
+{
+    margin-left: 8%;
+    width: 70%;
+    
+}
+
+td, th {
+    border: 1.7px solid #9f9f9f;
+    text-align: left;
+    padding: 7px;
+}
+
+#titre {
+    margin-left: 85px
+}
+
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#tr1{
+    background-color: #00b0f0
+}
