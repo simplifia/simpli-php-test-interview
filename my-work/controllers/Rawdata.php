@@ -19,4 +19,15 @@ class RawdataController extends Controller
     {
         return $i1 + $i2;
     }
+
+    /**
+     * Function to know if a value is even or odd
+     * @param int $val value to test
+     * @throws TypeError if $val is not an int
+     * @return string 
+     */
+    public static function isEvenOrOdd(int $val): string
+    {
+        return $val % 2 == 0 ? 'pair' : 'impair';
+    }
 }
