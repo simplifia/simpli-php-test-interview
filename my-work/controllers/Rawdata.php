@@ -5,6 +5,16 @@ class RawdataController extends Controller
 
     public function table()
     {
+        foreach (unserialize(INPUT_DATA) as $key => $value) {
+            $sum = $this::calcSum($key, $value);
+            $rawsData[] = new RawdataModel([
+                'i1' => $key,
+                'i2' => $value,
+                'sum' => $sum,
+                'desc' => $this::isEvenOrOdd($sum)
+            ]);
+        };
+        $this->set(['rawsData' => $rawsData]);
         $this->render('table');
     }
 
