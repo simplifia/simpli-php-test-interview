@@ -13,6 +13,7 @@ $action = isset($request[1]) && $request[1] !== '' ? $request[1] : 'table';
 
 define('WEB_ROOT', $webRoot);
 
-p($controller);
-p($action);
-d(WEB_ROOT);
+// change controller name for a name expected like -> NameController
+$controller = ucfirst(strtolower($controller)) . 'Controller';
+
+$requestController = new $controller();
