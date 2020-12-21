@@ -3,7 +3,12 @@
 spl_autoload_register(function ($class) {
     // check if we need a controller or a model
     if (preg_match('/Controller$/', $class)) {
-        d($class);
+        // delete 'Controller' of class name
+        $controller = substr($class, 0, -10);
+
+        if (file_exists('controllers/' . $controller . '.php')) {
+            d('controller found');
+        }
     } elseif (preg_match('/Model$/', $class)) {
         d($class);
     }
