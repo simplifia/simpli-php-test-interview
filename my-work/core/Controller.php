@@ -24,9 +24,17 @@ class Controller
         $controller = substr($controller, 0, -10);
         $controller = strtolower($controller);
 
-        // try to get the view we want to display
+        // try to get the view we want to display and display error if view not found
         if (file_exists('views/' . $controller . '/' . $view . '.php')) {
-            d('find view');
+
+            // get the html of the view with php already used and pass html to $content
+            ob_start();
+            require 'views/' . $controller . '/' . $view . '.php';
+            $content = ob_get_clean();
+
+            require 'views/layout.php';
+        } else {
+            echo 'Error 404 - view not found';
         }
     }
 }
