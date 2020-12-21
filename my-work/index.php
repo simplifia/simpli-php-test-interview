@@ -3,6 +3,7 @@
 require '../config.php';
 require 'core/core.php';
 require 'core/Controller.php';
+require 'core/Model.php';
 
 // get controller and action name
 $webRoot = str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
