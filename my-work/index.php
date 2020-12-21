@@ -2,6 +2,7 @@
 
 require '../config.php';
 require 'core/core.php';
+require 'core/Controller.php';
 
 // get controller and action name
 $webRoot = str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
@@ -17,3 +18,10 @@ define('WEB_ROOT', $webRoot);
 $controller = ucfirst(strtolower($controller)) . 'Controller';
 
 $requestController = new $controller();
+
+// call controller's action
+if (method_exists($requestController, $action)) {
+    $requestController->$action();
+} else {
+    echo 'Error 404 - Method not found';
+}
